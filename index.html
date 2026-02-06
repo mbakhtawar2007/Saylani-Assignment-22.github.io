@@ -13,16 +13,14 @@
             <span>Add Student</span>
             <form action="">
                 <input type="text" placeholder="Name" id="inpName">
-                <input type="number" placeholder="Age" id="inpAge">
-                <input type="number" placeholder="Marks" id="inpMarks">
+                <input type="number" id="inpAge" placeholder="Age" min="0" onkeydown="if(event.key === '-') event.preventDefault()">
+                <input type="number" placeholder="Marks" id="inpMarks" min="0" onkeydown="if(event.key === '-') event.preventDefault()">
                 <button id="subBtn">Add Student</button>
             </form>
         </div>
 
         <div class="display" id="dataDisplay">
-            <span>
-                Student List
-            </span>
+
         </div>
     </div>
 
