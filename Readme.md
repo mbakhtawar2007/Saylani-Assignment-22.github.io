@@ -52,36 +52,24 @@ A form must be provided with the following input fields:
 
 ---
 
-### 4.2 Age Validation
-
-* Students below 18 years are not allowed
-* If the age is less than 18:
-
-  * Display the error message:
-
-    > "Students under 18 are not allowed."
-  * Do not add the student to the list
-  * Do not save the student in localStorage
-
----
-
 ### 4.3 Marks-Based Result System
 
 After successful validation, the system must calculate the result based on marks:
 
-| Marks Range | Result      | Badge Color |
-| ----------- | ----------- | ----------- |
-| 80 – 100    | Distinction | Green       |
-| 60 – 79     | Pass        | Blue        |
-| 40 – 59     | Average     | Yellow      |
-| Below 40    | Fail        | Red         |
+| Marks Range | Result | Badge Color |
+| ----------- | ------ | ----------- |
+| 80 – 100    | A+     | Green       |
+| 70 – 79     | A      | Green       |
+| 60 – 69     | B      | Green       |
+| 50 – 59     | C      | Green       |
+| Below 50    | F      | Red         |
 
 * The result must be displayed clearly in the student list
 * Badge color must visually represent the result status
 
 ---
 
-### 4.4 Display Student List
+### 4.2 Display Student List
 
 * Students must be displayed in a table format
 
@@ -97,7 +85,7 @@ After successful validation, the system must calculate the result based on marks
 
 ---
 
-### 4.5 Delete Student
+### 4.3 Delete Student
 
 * Each student entry must include a **Delete** button
 * On clicking Delete:
@@ -107,7 +95,7 @@ After successful validation, the system must calculate the result based on marks
 
 ---
 
-### 4.6 Data Persistence
+### 4.4 Data Persistence
 
 * All student data must be stored in browser localStorage
 * On page reload:

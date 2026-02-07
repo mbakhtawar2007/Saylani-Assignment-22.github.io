@@ -21,11 +21,6 @@ function addStudent() {
     return;
   }
 
-  // if (age < 18) {
-  //   alert("Students under 18 are not allowed.");
-  //   return;
-  // }
-
   let result = "";
   if (marks >= 80) result = "A+";
   else if (marks >= 70) result = "A";
@@ -46,14 +41,15 @@ function addStudent() {
 function renderStudents() {
   let html = `
     <span>Student List</span>
-    <table border="1" width="100%" cellpadding="10">
-      <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Marks</th>
-        <th>Result</th>
-        <th>Action</th>
-      </tr>
+    <div class="table-wrapper">
+      <table border="1" width="100%" cellpadding="10">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Marks</th>
+          <th>Result</th>
+          <th>Action</th>
+        </tr>
   `;
 
   students.forEach((std, index) => {
@@ -70,12 +66,12 @@ function renderStudents() {
         <td>${std.age}</td>
         <td>${std.marks}</td>
         <td>
-          <span style="color:white; padding:5px 10px; border-radius:5px; background:${color}">
+          <span class="result-badge" style="color:white; background:${color}">
             ${std.result}
           </span>
         </td>
         <td>
-          <button onclick="deleteStudent(${index})" style="background:red; color:white; border:none; padding:5px 10px; cursor:pointer;">
+          <button class="delete-btn" onclick="deleteStudent(${index})">
             Delete
           </button>
         </td>
@@ -85,6 +81,7 @@ function renderStudents() {
 
   html += `
     </table>
+    </div>
     <p><strong>Total Students:</strong> ${students.length}</p>
   `;
 
